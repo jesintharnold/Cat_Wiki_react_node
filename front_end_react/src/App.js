@@ -59,15 +59,36 @@ function App() {
       <span class="figure__caption">
         Bengal
       </span>
-      </div>
-
-     
-
-      </div>
-
-      </div>
+      </div></div></div>
       </div>
     </section>
+    <section class="section bottom__sec">
+      <div class="secondhome">
+      <div class="secondhome__flex">  
+      <span class="thirdcap">Why should you have a cat?</span>
+      <span>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</span>
+      <a href="/" class="anchor_tag">
+       <span>READ MORE</span>
+      <i class="uil uil-arrow-right"></i>
+     </a>
+     </div>
+       <div class="images__grid">
+
+       
+       </div>
+      </div>
+
+      <div class="footer">
+       <div> 
+       <img src={CatwikiLogo} alt="Image not found"/>
+       <span>&#169;</span>created by craxy_jesi - devChallenge.io 2021
+      </div>
+       </div>
+      </section>
+
+
+
+
 
     
 
