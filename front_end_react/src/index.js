@@ -27,12 +27,12 @@ ReactDOM.render(
 
 
     </Switch>
-    {/* <div class="footer">
+    <div class="footer">
        <div> 
        <img src={CatwikiLogo} alt="Not found"/>
        <span class="c"><i class="uil uil-copyright"></i><span>created by <a href="https://github.com/jesintharnold" target="blank">Craxy_jesi</a>  - devChallenge.io 2021</span></span>
       </div>
-    </div> */}
+    </div>
 
 
      </Router>
