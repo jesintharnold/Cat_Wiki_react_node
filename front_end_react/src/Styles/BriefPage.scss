@@ -1,0 +1,109 @@
+$padding-universal-left:1.1rem;
+
+.BriefPage__container{
+    width:100%;
+    display: grid;
+    // grid-template-columns:1fr 4fr;
+    grid-template-rows:auto 1fr;
+    gap:2rem;
+    place-items: center;
+    
+    
+ .image{
+    position: relative;
+    width:12rem;
+    height:12rem;
+    img{
+        max-width:100%;
+        border-radius:20px;
+   }
+    &::before{
+            content:"";
+            position:absolute;
+            height:80%;
+            width:50px;
+            background-color:#DEC68B;
+            left:-0.6rem;
+            top:10%;
+            border-radius:14px;
+            z-index:-1;   
+    }
+
+   }
+}
+
+
+
+.brief_flex__container{
+    color: #291507;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+    
+    .first{
+        display: block;
+        font-family:"Montserrat-bold";
+        font-weight:400;
+        font-size:1.8rem;
+        line-height: 100%;
+        margin-bottom:1rem;
+    }
+
+    .second{
+        display: -webkit-box !important;
+        font-family:'Montserrat-black';
+        font-size:1.1rem;
+        text-align:justify;
+        font-style: Medium;
+        line-height:1.5rem;
+        overflow: hidden;
+       // white-space: normal; // -webkit-line-clamp:4;
+        // -webkit-box-orient: vertical;
+        margin-bottom:2rem;
+    }
+    
+}
+
+.details{
+
+    margin-bottom:0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    h{
+        font-family:"Montserrat-bold";
+        font-weight:400;
+        font-size:0.9rem;
+        line-height: 100%;
+        padding-right:0.5rem;
+       
+    }
+
+    span{
+        font-family:'Montserrat-black';
+        font-size:0.9rem;
+        text-align:justify;
+        font-style: Medium;
+        line-height:1.6rem;
+        overflow: hidden;
+    }
+}
+
+.gridcontent{
+
+    display: grid;
+    grid-template-columns:150px 1fr;
+    place-content: center;
+    align-items: baseline;
+
+    h{
+        font-family:"Montserrat-bold";
+    font-weight:400;
+    font-size:0.9rem;
+    line-height: 100%;
+    margin-bottom:1rem;
+    }
+
+}

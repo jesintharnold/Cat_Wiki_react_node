@@ -1,17 +1,15 @@
 import './Styles/App.scss';
 import CatwikiLogo from "./Assests/CatwikiLogo.svg";
-import search from "./Assests/search.svg";
+import Image_2 from "./Assests/image 1.png";
+import Image_1 from "./Assests/image 2.png";
+import Image_3 from "./Assests/image 3.png";
+
+
 
 function App() {
   return (
     <div className="App">
-    <header class="header">
-      <nav class="nav">
-      <a href="#">
-        <img src={CatwikiLogo} alt="Not Found" />
-      </a>
-      </nav>
-    </header>
+
     <section class="section home">
       <div class="home-curve">
       <div class="top">
@@ -73,17 +71,13 @@ function App() {
      </a>
      </div>
        <div class="images__grid">
-
+         <img src={Image_1} alt="Not found"/>
+         <img src={Image_2} alt="Not found"/>
+         <img src={Image_3} alt="Not found"/>
+      
        
        </div>
       </div>
-
-      <div class="footer">
-       <div> 
-       <img src={CatwikiLogo} alt="Image not found"/>
-       <span>&#169;</span>created by craxy_jesi - devChallenge.io 2021
-      </div>
-       </div>
       </section>
 
 
