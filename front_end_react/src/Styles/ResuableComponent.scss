@@ -3,12 +3,16 @@
 .Progress__container{
 
     display: flex;
+    // place-items: center;
+    justify-content: center;
     span{
         display: inline-block;
         background-color:#E0E0E0;        ;
         border-radius:0.5rem;
         width:100%;
         margin-right:0.5rem;
+        max-width:60px;
+
         }
 
         

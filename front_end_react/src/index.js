@@ -8,6 +8,8 @@ import BriefPage from './Components/BriefPage';
 import reportWebVitals from './reportWebVitals';
 import CatwikiLogo from "./Assests/CatwikiLogo.svg";
 import { BrowserRouter as Router,Route,Link,Switch } from "react-router-dom";
+import TopBreeds from './Components/topbreeds';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +26,7 @@ ReactDOM.render(
       <Route exact path="/"><App/></Route>
       <Route path="/progressbar"><Progressbar/></Route>
       <Route path="/brief"><BriefPage/></Route>
+      <Route path="/top"><TopBreeds/></Route>
 
 
     </Switch>
