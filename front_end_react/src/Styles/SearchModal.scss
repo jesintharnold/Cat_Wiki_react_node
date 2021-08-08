@@ -24,6 +24,7 @@
     align-items: center;
     padding:5px 20px 20px 20px;
     border-radius:20px;
+    
 }
 
 .close_modal{
@@ -90,6 +91,24 @@
 
         }
 
+    }
+
+}
+
+
+.recommends{
+    max-height:20rem;
+    overflow: scroll;
+    width:100%;
+    padding-left:1rem;
+
+    div{
+        padding:0.3rem;
+        font-size:1rem;
+
+        &:hover{
+            background: rgba(0,0,0,0.1);
+        }
     }
 
 }

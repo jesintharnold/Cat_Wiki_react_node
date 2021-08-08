@@ -104,9 +104,7 @@ function App() {
          <img src={Image_1} alt="Not found"/>
          <img src={Image_2} alt="Not found"/>
          <img src={Image_3} alt="Not found"/>
-      
-       
-       </div>
+      </div>
       </div>
       </section>
 
