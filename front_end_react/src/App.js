@@ -3,10 +3,38 @@ import CatwikiLogo from "./Assests/CatwikiLogo.svg";
 import Image_2 from "./Assests/image 1.png";
 import Image_1 from "./Assests/image 2.png";
 import Image_3 from "./Assests/image 3.png";
-
+import {useRef,useState} from 'react';
+import useWindowsize from './Components/customHooks/useWindow';
+import SearchModal from './Components/SearchModal';
 
 
 function App() {
+
+  const inputRef=useRef(null);
+  const buttonRef=useRef(null);
+  const window_val=useWindowsize();
+  const [modal,setModal]=useState(false);
+
+
+  const enableModal=()=>{
+      console.log(`Enable - Modal - Screen`);
+
+      console.log(window_val.width);
+
+      if(window_val.width<=480){
+      buttonRef.current.disabled=true;
+      inputRef.current.disabled=true;
+      setModal(true);
+      }else{
+      buttonRef.current.disabled=false;
+      inputRef.current.disabled=false;
+      
+      }
+
+      
+
+  }
+
   return (
     <div className="App">
 
@@ -16,9 +44,9 @@ function App() {
         <div>
         <span>Catwiki</span>
         <span>Get to know more about your cat breed</span>
-        <div class="search-container">
-          <input type="text" placeholder="Search"/>
-          <button class="search__button">
+        <div class="search-container" onClick={()=>enableModal()}>
+          <input type="text" placeholder="Search" ref={inputRef}/>
+          <button class="search__button" ref={buttonRef}>
           <i class="uil uil-search"></i>
           </button>
         </div>
@@ -83,7 +111,7 @@ function App() {
 
 
 
-
+      {modal?<SearchModal modal={modal} setModal={setModal}/>:null}
     
 
 
