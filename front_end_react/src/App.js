@@ -26,8 +26,10 @@ function App() {
       inputRef.current.disabled=true;
       setModal(true);
       }else{
+        setModal(false);
       buttonRef.current.disabled=false;
       inputRef.current.disabled=false;
+      
       
       }
 
