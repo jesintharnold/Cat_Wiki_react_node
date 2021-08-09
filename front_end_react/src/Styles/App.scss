@@ -35,7 +35,7 @@ section{
          
 
          
-          div{
+          .center_div{
             
               width:85%;
               display:flex;
@@ -71,8 +71,11 @@ section{
              margin-bottom:1rem;
             }
 
+            .container_wrap{
+                position: relative;
+
             .search-container{
-                width:50%;
+                width:100%;
                 border-radius:20px;
                 overflow: hidden;
                 background:#ffffff;
@@ -81,7 +84,7 @@ section{
                 justify-content: flex-start;
                 align-items: center;
                 padding:0.45rem;
-                max-width:55%;
+            
                 
                 
                
@@ -126,6 +129,7 @@ section{
                 }
           
             }
+        }
 
           }
 
@@ -386,8 +390,12 @@ color:$text-color;
 
 @media screen and (max-width:320px){
     .top{
-        div{
+        .center_div{
             width:100% !important;
+
+            .container_wrap{
+                width:60% !important;
+            }
             
         }
     }
@@ -420,8 +428,12 @@ color:$text-color;
 
 @media screen and (min-width:321px) and (max-width:375px){
     .top{
-        div{
+        .center_div{
             width:85% !important;
+
+            .container_wrap{
+                width:70% !important;
+            }
         }
     }
 
@@ -451,8 +463,11 @@ color:$text-color;
 
 @media  screen and (min-width:376px) and (max-width:430px) {
     .top{
-        div{
+        .center_div{
             width:70% !important;
+            .container_wrap{
+                width:70% !important;
+            }
         }
     }
 
@@ -485,12 +500,21 @@ color:$text-color;
 }
 
 @media screen and (min-width:431px) and (max-width:480px) {
+
+
+    .center_div{
+        .search-container{
+            width:70% !important;
+        }
+      }
+
   .footer{
     padding: 0.9em 1.4rem;
       div{
           align-items: center;
       }
   }
+
 }
 
 @media screen and (min-width:481px) and (max-width:600px){
@@ -503,8 +527,8 @@ color:$text-color;
            
               background:url('../Assests/HeroImagemd.png') center / cover no-repeat;
             
-              div{
-                  max-width:70%;
+              .center_div{
+                  width:70% !important;
 
                   span:nth-child(1){
                   font-size: 2.1rem;
@@ -514,6 +538,10 @@ color:$text-color;
               span:nth-child(2){
                 font-size:1.4rem;
                 margin-bottom:2rem;
+                }
+
+                .container_wrap{
+                    width:55% !important;
                 }
               }
     
@@ -602,8 +630,8 @@ color:$text-color;
            
               background:url('../Assests/HeroImagelg.png') center / cover no-repeat;
             
-              div{
-                  max-width:60%;
+              .center_div{
+                  width:60% !important;
 
                   span:nth-child(1){
                   font-size: 2.1rem !important;
@@ -614,6 +642,16 @@ color:$text-color;
                 font-size:1.4rem;
                 margin-bottom:2rem;
                 }
+
+
+                .container_wrap{
+                    width:55% !important;
+                }
+
+
+
+
+                
               }
     
             }
@@ -714,8 +752,8 @@ color:$text-color;
            
               background:url('../Assests/HeroImagelg.png') center / cover no-repeat;
             
-              div{
-                  max-width:40%;
+              .center_div{
+                  width:40% !important;
 
                   span:nth-child(1){
                   font-size: 2.1rem !important;
@@ -725,6 +763,10 @@ color:$text-color;
               span:nth-child(2){
                 font-size:1.4rem;
                 margin-bottom:2rem;
+                }
+
+                .container_wrap{
+                    width:70% !important;
                 }
               }
     
@@ -819,9 +861,9 @@ color:$text-color;
               background:url('../Assests/HeroImagelg.png') center / cover no-repeat;
               padding:4rem 4rem 4rem 4rem;
             
-              div{
+              .center_div{
                   
-                  width:40%;
+                  width:40% !important;
                   span:nth-child(1){
                   font-size: 2.5rem !important;
                   margin-bottom:2rem;
@@ -869,9 +911,7 @@ color:$text-color;
                 font-size:2.2rem !important;
             }
             
-            .bottom{
-               
-            }
+    
         }
     
     }
@@ -957,4 +997,30 @@ color:$text-color;
     .bottom{
         padding:4rem !important;
     }
+}
+
+
+.container_wrap{
+    width:70% !important;
+
+    .recommend{
+        position:absolute;
+        max-height:10rem;
+        overflow-y: scroll;
+        width:100%;
+        padding-left:1rem;
+        background-color: #ffffff;
+    
+
+        div{
+            padding:0.2rem;
+            font-size:1rem;
+            cursor: pointer;
+    
+            &:hover{
+                background: rgba(0,0,0,0.1);
+            }
+        }
+    }
+
 }

@@ -2,36 +2,9 @@ import React, { useRef, useState } from "react";
 import ReactDom from "react-dom";
 import data from '../cat.json';
 import "../Styles/SearchModal.scss";
-const SearchModal=({modal,setModal})=>{
-   
-    const [suggest,setSuggest]=useState([]);
-    const [text,setText]=useState("");
+const SearchModal=({modal,setModal,onchange,suggest,setSuggest,text,setText,valChange})=>{
+
     const input_ref=useRef();
-
-
-
-    
-
-    const onchange=(val)=>{
-        
-       if(val!==(" "&&"")){
-        const func_dat=data["cat"].filter(({first_name})=>{
-            return first_name.toLocaleLowerCase().includes(val.toLocaleLowerCase())
-        });
-
-        setSuggest(func_dat);
-       }else{
-           setSuggest([]);
-       }
-    };
-
-    const valChange=(textval)=>{
-           console.log(textval);
-           setText(textval);
-           input_ref.current.value=textval;
-           setSuggest([]);
-           
-    };
 
     return ReactDom.createPortal (
     <div className="modal_wrapper">
@@ -45,7 +18,7 @@ const SearchModal=({modal,setModal})=>{
     </div>
     <div className="recommends" >
     {(suggest && suggest.length>0)?(
-        suggest.map(({first_name},index)=><div key={index} onClick={()=>valChange(first_name)}>{first_name}</div>)
+        suggest.map(({first_name},index)=><div key={index} onClick={()=>valChange(first_name,input_ref)}>{first_name}</div>)
     ):null}
 
       

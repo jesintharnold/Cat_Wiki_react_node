@@ -6,7 +6,8 @@ import Image_3 from "./Assests/image 3.png";
 import {useRef,useState} from 'react';
 import useWindowsize from './Components/customHooks/useWindow';
 import SearchModal from './Components/SearchModal';
-
+import "./Styles/SearchModal.scss";
+import data from './cat.json';
 
 function App() {
 
@@ -14,6 +15,10 @@ function App() {
   const buttonRef=useRef(null);
   const window_val=useWindowsize();
   const [modal,setModal]=useState(false);
+  const [suggest,setSuggest]=useState([]);
+  const [text,setText]=useState("");
+  
+
 
 
   const enableModal=()=>{
@@ -37,20 +42,49 @@ function App() {
 
   }
 
+
+  const onchange=(val)=>{
+        
+    if(val!==(" "&&"")){
+     const func_dat=data["cat"].filter(({first_name})=>{
+         return first_name.toLocaleLowerCase().includes(val.toLocaleLowerCase())
+     });
+
+     setSuggest(func_dat);
+    }else{
+        setSuggest([]);
+    }
+ };
+
+ const valChange=(textval,ref_val)=>{
+        console.log(textval);
+        setText(textval);
+        ref_val.current.value=textval;
+        setSuggest([]);
+        };
+
   return (
     <div className="App">
 
     <section class="section home">
       <div class="home-curve">
       <div class="top">
-        <div>
+        <div className="center_div">
         <span>Catwiki</span>
         <span>Get to know more about your cat breed</span>
+        <div className="container_wrap">
         <div class="search-container" onClick={()=>enableModal()}>
-          <input type="text" placeholder="Search" ref={inputRef}/>
+          <input type="text" placeholder="Search" ref={inputRef} onChange={(e)=>onchange(e.target.value)}/>
           <button class="search__button" ref={buttonRef}>
           <i class="uil uil-search"></i>
           </button>
+        </div>
+        <div className="recommend">
+        {(suggest && suggest.length>0)?(
+        suggest.map(({first_name},index)=><div key={index} onClick={()=>valChange(first_name,inputRef)}>{first_name}</div>)
+    ):null}
+
+        </div>
         </div>
         </div>
         </div>
@@ -111,7 +145,7 @@ function App() {
 
 
 
-      {modal?<SearchModal modal={modal} setModal={setModal}/>:null}
+      {modal?<SearchModal modal={modal} setModal={setModal} onchange={onchange} suggest={suggest} setSuggest={setSuggest} text={text} setText={setText} valChange={valChange} />:null}
     
 
 
