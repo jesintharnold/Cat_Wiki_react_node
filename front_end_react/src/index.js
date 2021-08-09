@@ -24,7 +24,6 @@ ReactDOM.render(
 
     <Switch>
       <Route exact path="/"><App/></Route>
-      <Route path="/progressbar"><Progressbar/></Route>
       <Route path="/brief"><BriefPage/></Route>
       <Route path="/top"><TopBreeds/></Route>
 

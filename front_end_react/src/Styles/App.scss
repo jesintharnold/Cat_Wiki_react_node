@@ -1004,12 +1004,13 @@ color:$text-color;
     width:70% !important;
 
     .recommend{
-        position:absolute;
-        max-height:10rem;
+        position: absolute;
+        max-height: 10rem;
         overflow-y: scroll;
-        width:100%;
-        padding-left:1rem;
+        width: 85%;
+        padding-left: 1rem;
         background-color: #ffffff;
+        left: 0.7rem;
     
 
         div{

@@ -8,6 +8,7 @@ import useWindowsize from './Components/customHooks/useWindow';
 import SearchModal from './Components/SearchModal';
 import "./Styles/SearchModal.scss";
 import data from './cat.json';
+import { Link } from 'react-router-dom';
 
 function App() {
 
@@ -129,10 +130,10 @@ function App() {
       <div class="secondhome__flex">  
       <span class="thirdcap">Why should you have a cat?</span>
       <span>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</span>
-      <a href="/" class="anchor_tag">
+      <Link to="/top" class="anchor_tag">
        <span>READ MORE</span>
       <i class="uil uil-arrow-right"></i>
-     </a>
+     </Link>
      </div>
        <div class="images__grid">
          <img src={Image_1} alt="Not found"/>
